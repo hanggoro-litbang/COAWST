@@ -1,0 +1,13 @@
+# COAWST Installation
+# Libraries should be installed (see Libraries Section)
+# clone COAWST Github
+git clone https://github.com/jcwarner-usgs/COAWST
+# 1. Install MCT LIbrary
+cd COAWST
+mkdir -p MCT-LIB
+cd COAWST/Lib/MCT
+./configure --prefix=${MCT-LIB directory} F90=gfortran
+make
+make install
+# 2. Install SCRIP-COAWST
+
