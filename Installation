@@ -2,6 +2,7 @@
 # Libraries should be installed (see Libraries Section)
 # clone COAWST Github
 git clone https://github.com/jcwarner-usgs/COAWST
+
 # 1. Install MCT LIbrary
 cd ${Installed COAWST dir}
 mkdir -p MCT-LIB
@@ -10,11 +11,13 @@ export NETCDF=${Installed NETCDF dir}
 ./configure --prefix=${MCT-LIB directory} F90=gfortran
 make
 make install
+
 # 2. Install SCRIP-COAWST
 cd ${Installed COAWST dir}/Lib/SCRIPT_COAWST
 # edit makefile (change compiler)
 export NETCDF=${Installed NETCDF dir}
 make
+
 # 3. Install COAWST Sandy Case
 vi ~/.bashrc (temporary for installation only)
 export WRF_EM_CORE=1
@@ -54,6 +57,7 @@ vi Projects/Sandy/sandy.h
 script build.log
 ./coawst.bash -j 10
 exit
+
 # see build.log if there is any error
 # Errors
 # 1. unrecognized command line option ‘-fallow-argument-mismatch’ 
