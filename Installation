@@ -25,8 +25,8 @@ export NETCDF= ${Installed NETCDF dir}
 export NETCDF4=1
 export HDF5=${Installed HDF5 dir}
 export jasper=${Installed jasper dir}
-export JASPERLIB=${Installed NETCDF dir}/lib
-export ${Installed NETCDF dir}/include
+export JASPERLIB=${Installed jasper dir}/lib
+export JASPERINC=${Installed jasper dir}/include
 export WRF_DA_CORE=0
 export WRFIO_NCD_LARGE_FILE_SUPPORT=1
 export MCT_INCDIR=${Installed MCT-LIB dir}/include
@@ -65,7 +65,7 @@ exit
 vi ${Installed COAWST dir}/Compilers/Linux-gfortran.mk
 # find FFLAGS=‘-fallow-argument-mismatch’ and remove
 # 2. unrecognize –f90=gfortran
-# edit file configure.wrf erase DM_FC section
+# edit file configure.wrf erase –f90=gfortran in DM_FC section
 # 3. f951: sorry, unimplemented: Graphite loop optimizations cannot be used 
 # (edit FFLAGS += -ftree-vectorize -funroll-loops -w -ffree-form -ffree-line-length-none -frecord-marker=4 -fconvert=big-endian) 
 # remove -funroll-loops
@@ -78,9 +78,3 @@ vi coawst.bash
 # references
 https://www.myroms.org/forum/viewtopic.php?t=5506
 https://www.myroms.org/forum/viewtopic.php?p=23198&hilit=swan#p23198
-
-
-
-
-
-
