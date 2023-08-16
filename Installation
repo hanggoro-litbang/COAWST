@@ -9,6 +9,8 @@ mkdir -p MCT-LIB
 cd COAWST/Lib/MCT
 export NETCDF=${Installed NETCDF dir}
 ./configure --prefix=${MCT-LIB directory} F90=gfortran
+./configure --prefix=${MCT-LIB directory} F90=ifort (vi Makefile.conf and change F90 to ifort)
+
 make
 make install
 
@@ -17,6 +19,7 @@ cd ${Installed COAWST dir}/Lib/SCRIPT_COAWST
 # edit makefile (change compiler)
 export NETCDF=${Installed NETCDF dir}
 make
+with ifort = f951: Fatal Error: Reading module ‘grids’ at line 1934 column 20: Unexpected EOF
 
 # 3. Install COAWST Sandy Case
 vi ~/.bashrc (temporary for installation only)
