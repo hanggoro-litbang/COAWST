@@ -19,7 +19,6 @@ cd ${Installed COAWST dir}/Lib/SCRIPT_COAWST
 # edit makefile (change compiler)
 export NETCDF=${Installed NETCDF dir}
 make
-with ifort = f951: Fatal Error: Reading module ‘grids’ at line 1934 column 20: Unexpected EOF
 
 # 3. Install COAWST Sandy Case
 vi ~/.bashrc (temporary for installation only)
