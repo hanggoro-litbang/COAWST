@@ -3,13 +3,19 @@
 # clone COAWST Github
 git clone https://github.com/jcwarner-usgs/COAWST
 
+for intel compiler add below to the .bashrc
+export I_MPI_CC=icc
+export I_MPI_CXX=icpc
+export I_MPI_F77=ifort
+export I_MPI_F90=ifort
+
 # 1. Install MCT LIbrary
 cd ${Installed COAWST dir}
 mkdir -p MCT-LIB
 cd COAWST/Lib/MCT
 export NETCDF=${Installed NETCDF dir}
 ./configure --prefix=${MCT-LIB directory} F90=gfortran
-./configure --prefix=${MCT-LIB directory} F90=ifort (vi Makefile.conf and change F90 to ifort)
+./configure --prefix=${MCT-LIB directory} F90=ifort (vi Makefile.conf and change FC to ifort)
 
 make
 make install
