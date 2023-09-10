@@ -76,7 +76,7 @@ vi ${Installed COAWST dir}/Compilers/Linux-gfortran.mk
 # edit file configure.wrf erase –f90=gfortran in DM_FC section
 # 3. f951: sorry, unimplemented: Graphite loop optimizations cannot be used 
 # (edit FFLAGS += -ftree-vectorize -funroll-loops -w -ffree-form -ffree-line-length-none -frecord-marker=4 -fconvert=big-endian) 
-# remove -funroll-loops
+# remove -ftree-loop-linear 
 vi Linux-gfortran.mk
 # 4. error nf-config not found
 vi coawst.bash
