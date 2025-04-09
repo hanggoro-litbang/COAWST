@@ -14,7 +14,7 @@ cd ${Installed COAWST dir}
 mkdir -p MCT-LIB
 cd COAWST/Lib/MCT
 export NETCDF=${Installed NETCDF dir}
-./configure --prefix=${MCT-LIB directory} F90=gfortran
+./configure --prefix=${MCT-LIB directory} F90=gfortran FC=mpi90 FCFLAGS=-fallow-argument-mismatch
 ./configure --prefix=${MCT-LIB directory} F90=ifort (vi Makefile.conf and change FC to ifort)
 
 make
