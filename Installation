@@ -85,6 +85,10 @@ vi coawst.bash
 # pull new github
 # 6. error related to get_numswan_grids (coawst 3.8)
 # edit file get_numswan_grids.F under Master dir and add USE swan_iounits
+# 7. error on JOE_TC case 
+# At line 6925 of file module_ra_rrtm.f90 (unit = 10, file = 'RRTM_DATA')
+# add FFLAGS += -frecord-marker=4 -fconvert=big-endian in Linux-gfortran.mk file in line 41
+# https://github.com/DOI-USGS/COAWST/issues/247
 # references
 https://www.myroms.org/forum/viewtopic.php?t=5506
 https://www.myroms.org/forum/viewtopic.php?p=23198&hilit=swan#p23198
