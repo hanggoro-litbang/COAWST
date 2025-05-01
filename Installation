@@ -83,6 +83,8 @@ vi coawst.bash
 # edit bagian export   NETCDF_CONFIG=/opt/netcdf/4.1.3/bin/nc-config
 # 5. error crosskk_
 # pull new github
+# 6. error related to get_numswan_grids
+# edit file get_numswan_grids.F under Master dir and add USE swan_iounits
 # references
 https://www.myroms.org/forum/viewtopic.php?t=5506
 https://www.myroms.org/forum/viewtopic.php?p=23198&hilit=swan#p23198
